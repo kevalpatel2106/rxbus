@@ -11,4 +11,4 @@
  *   the specific language governing permissions and limitations under the License.
  */
 
-include ':app', ':simple-rxbus'
+include ':sample', ':simple-rxbus'

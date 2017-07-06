@@ -11,6 +11,14 @@
   ~   the specific language governing permissions and limitations under the License.
   -->
 
-<resources>
-    <string name="app_name">RxBus Sample</string>
-</resources>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root_view"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.kevalpatel2106.rxbussample.FragmentOne">
+
+
+</RelativeLayout>
