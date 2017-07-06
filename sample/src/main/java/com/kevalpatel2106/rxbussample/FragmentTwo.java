@@ -37,7 +37,7 @@ import io.reactivex.functions.Consumer;
  * A simple {@link Fragment} subclass.
  */
 public class FragmentTwo extends Fragment {
-
+    public Disposable mDisposable;
 
     public FragmentTwo() {
         // Required empty public constructor
@@ -58,13 +58,14 @@ public class FragmentTwo extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final TextView textView = (TextView) view.findViewById(R.id.notify_tv);
+        final TextView textView = view.findViewById(R.id.notify_tv);
 
+        //Register the event to the bus
         RxBus.getDefault().register(Point.class)
                 .doOnSubscribe(new Consumer<Disposable>() {
                     @Override
                     public void accept(@NonNull Disposable disposable) throws Exception {
-
+                        mDisposable = disposable;
                     }
                 })
                 .subscribe(new Consumer<Event>() {
@@ -75,5 +76,13 @@ public class FragmentTwo extends Fragment {
                                 "Fragment One clicked at (%d,%d).", point.x, point.y));
                     }
                 });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        //Unregister from the event bus.
+        if (mDisposable != null) mDisposable.dispose();
     }
 }
