@@ -10,7 +10,6 @@
  *  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for
  *   the specific language governing permissions and limitations under the License.
  */
-
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
@@ -22,6 +21,11 @@ android {
         minSdkVersion 16
         targetSdkVersion 26
         consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
     }
 
     // This is important, it will run lint checks but won't abort build

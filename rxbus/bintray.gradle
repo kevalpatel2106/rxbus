@@ -92,7 +92,7 @@ if (project.rootProject.file('local.properties').exists()) {
             repo = "maven"
 
             // it is the name that appears in bintray when logged
-            name = "simple-rx-bus"    //Name of the artifact [Group Id]:[name]:[version]
+            name = "rxbus"    //Name of the artifact [Group Id]:[name]:[version]
             websiteUrl = siteUrl
             vcsUrl = gitUrl
             licenses = ["Apache-2.0"]

@@ -11,4 +11,27 @@
  *   the specific language governing permissions and limitations under the License.
  */
 
-include ':sample', ':rxbus', ':rxbus-annotations'
+package rxbus;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * Created by Keval on 07-Jul-17.
+ */
+
+@Retention(RetentionPolicy.CLASS)
+@Target(ElementType.METHOD)
+public @interface RegisterEvent {
+    String[] EVENT_TAG() default "";
+
+    Class[] EVENT_CLASS() default NONE.class;
+
+    /**
+     * Default value for {@link #EVENT_CLASS()}.
+     */
+    enum NONE {
+    }
+}

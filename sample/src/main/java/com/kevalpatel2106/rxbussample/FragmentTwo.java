@@ -23,14 +23,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kevalpatel2106.rxbus.Event;
-import com.kevalpatel2106.rxbus.RxBus;
-
 import java.util.Locale;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
+import rxbus.Event;
+import rxbus.RegisterEvent;
+import rxbus.RxBus;
 
 
 /**
@@ -47,6 +47,10 @@ public class FragmentTwo extends Fragment {
         return new FragmentTwo();
     }
 
+    @RegisterEvent(EVENT_TAG = {""})
+    void onEvent() {
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,7 +64,7 @@ public class FragmentTwo extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         final TextView textView = view.findViewById(R.id.notify_tv);
 
-        //Register the event to the bus
+        //RegisterEvent the event to the bus
         RxBus.getDefault().register(Point.class)
                 .doOnSubscribe(new Consumer<Disposable>() {
                     @Override

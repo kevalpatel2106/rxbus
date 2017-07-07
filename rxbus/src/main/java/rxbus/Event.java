@@ -11,7 +11,7 @@
  *   the specific language governing permissions and limitations under the License.
  */
 
-package com.kevalpatel2106.rxbus;
+package rxbus;
 
 /**
  * Created by Keval on 06-Jul-17.

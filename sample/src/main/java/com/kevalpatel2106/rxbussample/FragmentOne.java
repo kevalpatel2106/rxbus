@@ -23,8 +23,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kevalpatel2106.rxbus.Event;
-import com.kevalpatel2106.rxbus.RxBus;
+import rxbus.Event;
+import rxbus.RxBus;
 
 
 /**
@@ -32,7 +32,6 @@ import com.kevalpatel2106.rxbus.RxBus;
  */
 public class FragmentOne extends Fragment {
     static final String EVENT_CLICK = "event_click";
-
 
     public FragmentOne() {
         // Required empty public constructor

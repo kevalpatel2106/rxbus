@@ -11,4 +11,7 @@
  *   the specific language governing permissions and limitations under the License.
  */
 
-include ':sample', ':rxbus', ':rxbus-annotations'
+apply plugin: 'java'
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
