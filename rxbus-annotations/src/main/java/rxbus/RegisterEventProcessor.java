@@ -34,7 +34,7 @@ import javax.tools.JavaFileObject;
  * Created by Keval on 07-Jul-17.
  */
 
-@SupportedAnnotationTypes("com.kevalpatel2106.rxbus.RegisterEvent")
+@SupportedAnnotationTypes("rxbus.RegisterEvent")
 @SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class RegisterEventProcessor extends AbstractProcessor {
     @Override
@@ -57,13 +57,13 @@ public class RegisterEventProcessor extends AbstractProcessor {
 
         StringBuilder builder = new StringBuilder()
                 .append("package " + packageName + ";")
-                .append("public class RegisterEvent1{\n\n")
+                .append("public class RegisterEvent1 {\n\n")
                 .append("\tpublic static String getTag(){\n")
                 .append("\t\treturn " + names[0] + ";")
                 .append("\t}")
                 .append("}");
 
-        // Create com.emmasuzuki.annotation.demo.Greeter file
+
         try {
             JavaFileObject javaFileObject = processingEnv.getFiler().createSourceFile(packageName + ".RegisterEvent1");
             // Write contents in builder into file
