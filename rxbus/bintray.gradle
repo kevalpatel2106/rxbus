@@ -31,7 +31,7 @@ if (project.rootProject.file('local.properties').exists()) {
                     packaging 'aar' //AAR format
 
                     // Add your description here
-                    name 'Simple RxBus'  //Name of the repo
+                    name 'RxBus'  //Name of the repo
                     description = 'Implementation of event bus using Rx for Android.'
                     url siteUrl
 
@@ -92,7 +92,7 @@ if (project.rootProject.file('local.properties').exists()) {
             repo = "maven"
 
             // it is the name that appears in bintray when logged
-            name = "simple-rx-bus"    //Name of the artifact [Group Id]:[name]:[version]
+            name = "rx-bus"    //Name of the artifact [Group Id]:[name]:[version]
             websiteUrl = siteUrl
             vcsUrl = gitUrl
             licenses = ["Apache-2.0"]
