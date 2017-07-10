@@ -1,4 +1,7 @@
 # RxBus
+
+[ ![Download](https://api.bintray.com/packages/kevalpatel2106/maven/rx-bus/images/download.svg) ](https://bintray.com/kevalpatel2106/maven/rx-bus/_latestVersion) [![Build Status](https://travis-ci.org/kevalpatel2106/rxbus.svg?branch=master)](https://travis-ci.org/kevalpatel2106/rxbus)
+
 #### Implementation of event bus using Rx for Android.
 
 ## Gradle dependency: 
