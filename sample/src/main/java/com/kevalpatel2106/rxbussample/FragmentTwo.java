@@ -25,6 +25,7 @@ import android.widget.TextView;
 
 import com.kevalpatel2106.rxbus.Event;
 import com.kevalpatel2106.rxbus.RxBus;
+import com.kevalpatel2106.rxbus.annotations.RegisterEvent;
 
 import java.util.Locale;
 
@@ -47,6 +48,10 @@ public class FragmentTwo extends Fragment {
         return new FragmentTwo();
     }
 
+    @RegisterEvent(EVENT_TAG = {"TAG"})
+    void onEvent() {
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

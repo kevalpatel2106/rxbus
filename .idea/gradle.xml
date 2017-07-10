@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/rxbus" />
+            <option value="$PROJECT_DIR$/rxbus-annotations" />
             <option value="$PROJECT_DIR$/sample" />
           </set>
         </option>
