@@ -11,4 +11,6 @@
  *   the specific language governing permissions and limitations under the License.
  */
 
-include ':sample', ':rxbus', ':rxbus-annotations', ':rxbus-compiler'
+ext {
+
+}

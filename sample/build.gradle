@@ -12,15 +12,24 @@
  */
 
 apply plugin: 'com.android.application'
+apply from: '../misc/config.gradle'
+apply from: '../misc/deps.gradle'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    compileSdkVersion buidlConfig.compile
+    buildToolsVersion buidlConfig.buildToolVersion
+
+    compileOptions {
+        sourceCompatibility javaCompatibility.sourceCompatibility
+        targetCompatibility javaCompatibility.targetCompatibility
+    }
+
     defaultConfig {
         applicationId "com.kevalpatel2106.rxbussample"
 
-        minSdkVersion 16
-        targetSdkVersion 26
+        //sdks
+        minSdkVersion buidlConfig.min
+        targetSdkVersion buidlConfig.target
 
         versionCode 1
         versionName "1.0"
@@ -31,11 +40,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceCompatibility = javaCompatibility.sourceCompatibility
+    targetCompatibility = javaCompatibility.targetCompatibility
+
+    packagingOptions packageExcludes
 }
 
 dependencies {
     compile project(':rxbus')
-    compile project(':rxbus-annotations')
+    compile project(':rxbus-compiler')
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:support-v4:26.0.0-alpha1'
 }

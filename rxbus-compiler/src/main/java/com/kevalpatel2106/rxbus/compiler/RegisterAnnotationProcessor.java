@@ -11,7 +11,9 @@
  *   the specific language governing permissions and limitations under the License.
  */
 
-package com.kevalpatel2106.rxbus.annotations;
+package com.kevalpatel2106.rxbus.compiler;
+
+import com.kevalpatel2106.rxbus.annotations.RegisterEvent;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -27,7 +29,7 @@ import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 import javax.tools.JavaFileObject;
 
-@SupportedAnnotationTypes("com.kevalpatel2106.rxbus.RegisterEvent")
+@SupportedAnnotationTypes("com.kevalpatel2106.rxbus.annotations.RegisterEvent")
 @SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class RegisterAnnotationProcessor extends AbstractProcessor {
     public static int COUNT = 1;

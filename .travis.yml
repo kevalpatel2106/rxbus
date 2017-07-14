@@ -47,4 +47,4 @@ script:
     #- android-wait-for-emulator
     - adb devices   #Display list of devices
     - adb shell input keyevent 82 &
-    - ./gradlew assembleDebug -PdisablePreDex --stacktrace
+    - ./gradlew sample:assembleDebug --PdisablePreDex --stacktrace

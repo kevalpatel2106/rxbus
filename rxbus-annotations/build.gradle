@@ -12,10 +12,9 @@
  */
 
 apply plugin: 'java'
+apply from: '../misc/config.gradle'
+apply from: '../misc/deps.gradle'
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-}
+sourceCompatibility = javaCompatibility.sourceCompatibility
+targetCompatibility = javaCompatibility.targetCompatibility
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
